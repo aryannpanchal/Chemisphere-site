@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="http://fonts.cdnfonts.com/css/kepler-std" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<style>
+<style>
+@import url('http://fonts.cdnfonts.com/css/kepler-std');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Kepler Std', sans-serif;
+}
+
+.flex-r,
+.flex-c {
+  justify-content: right;
+  align-items: right;
+  display: flex;
+}
+.flex-c {
+  flex-direction: column;
+}
+.flex-r {
+  flex-direction: row;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px 80px;
+
+}
+
+.login-text {
+  background-color: #f6f6f6;
+  max-width: 400px;
+  min-height: 500px;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.logo {
+  margin-bottom: 20px;
+  font-family: 'Kepler Std', sans-serif;
+}
+.logo span,
+.logo span i {
+  font-size: 25px;
+  color: #0d8aa7;
+  font-family: 'Kepler Std', sans-serif;
+                                                
+}
+font-family: 'Kepler Std', sans-serif;
+
+.login-text h1 {
+  font-size: 25px;
+}
+.login-text p {
+  font-size: 15px;
+  color: #000000b2;
+}
+
+form {
+  align-items: flex-start !important;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.input-box {
+  margin: 10px 0px;
+  width: 100%;
+}
+.label {
+  font-size: 15px;
+  color: black;
+  margin-bottom: 3px;
+}
+.input {
+  background-color: #f6f6f6;
+  padding: 0px 5px;
+  border: 2px solid rgba(216, 216, 216, 1);
+  border-radius: 10px;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 10px 5px;
+  background-color: #f6f6f6;
+  flex: 1;
+}
+.input i {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.check span {
+  color: #000000b2;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.btn {
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 10px 15px;
+  background: linear-gradient(122.33deg, #68bed1 30.62%, #1e94e9 100%);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+.extra-line {
+  font-size: 15px;
+  font-weight: 600;
+}
+.extra-line a {
+  color: #0095b6;
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ font-family: cursive;
+}
+a {
+ text-decoration: none;
+}
+li {
+ list-style: none;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("background.png");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 20px;
+}
+.nav-links a {
+ color: #fff;
+}
+/* LOGO */
+.logo {
+ font-size: 32px;
+ color: white;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+}
+.menu li:hover {
+ background-color: #4c9e9e;
+ border-radius: 5px;
+ transition: 0.3s ease;
+}
+.menu li {
+ padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.services {
+ position: relative; 
+}
+.dropdown {
+ background-color: rgb(1, 139, 139);
+ padding: 1em 0;
+ position: absolute; /*WITH RESPECT TO PARENT*/
+ display: none;
+ border-radius: 8px;
+ top: 35px;
+}
+
+
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+.services:hover .dropdown {
+ display: block;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  text-decoration: none;
+}
+footer{
+  width: 100%;
+position: static;
+  bottom: 0;
+  left: 0;
+  background: #111;
+}
+footer .content{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .content p,a{
+  color: #fff;
+}
+footer .content .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .content .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+
+}
+footer .content p{
+  text-align: justify;
+}
+footer .content .lower .topic{
+  margin: 24px 0 5px 0;
+}
+footer .content .lower i{
+  padding-right: 16px;
+}
+footer .content .middle{
+  padding-left: 80px;
+}
+footer .content .middle a{
+  line-height: 32px;
+}
+footer .content .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  background: #000;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .content .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: #d9d9d9;
+  background: #eb2f06;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid #eb2f06;
+  transition: all 0.3s ease-in-out;
+}
+.content .right input[type="submit"]:hover{
+  background: none;
+  color:  #eb2f06;
+}
+footer .content .media-icons a{
+  font-size: 16px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #1e94e9;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+.content .media-icons a:hover{
+  border-color: #eb2f06;
+}
+footer .bottom{
+  width: 100%;
+  text-align: right;
+  color: #d9d9d9;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a{
+  color: #eb2f06;
+}
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color: #eb2f06;
+}
+@media (max-width:1100px) {
+  footer .content .middle{
+    padding-left: 50px;
+  }
+}
+@media (max-width:950px){
+  footer .content .box{
+    width: 50%;
+  }
+  .content .right{
+    margin-top: 40px;
+  }
+}
+@media (max-width:560px){
+  footer{
+    position: relative;
+  }
+  footer .content .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .content .middle{
+    padding-left: 0;
+  }
+}
+
+
+
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+
+<div class="bg">
+<nav class="navbar">
+		<div class="logo">Chemisphere</div>
+			<ul class="nav-links">
+				<div class="menu">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="testimonial.html">Testimonials</a></li>
+					<li><a href="aboutus.html">About us</a></li>
+					<li><a href="contact.html">Contact us</a></li>
+				</div>
+			</ul>
+	</nav>
+	<div class=" flex-r container">
+    <div class="flex-r login-wrapper">
+      <div class="login-text">
+        <div class="logo">
+        <!--  <span><i class="fa-solid fa-atom"></i></span>-->
+          <span>Chemisphere</span>
+        </div>
+        <h1>Book a free class</h1>
+        <p>It's not long before you embark on this journey! </p>
+		<form class="flex-c"
+  action="https://formspree.io/f/xvolqkdb"
+  method="POST"
+>
+<div class="input-box">
+  <label>
+    Your email:
+	<div class=" flex-r input">
+    <input type="email" name="email" placeholder="name@abc.com">
+	<i class="fas fa-at"></i>
+	</div>
+  </label><br>
+  <label>
+  </div>
+  <div class="input-box">
+  <label>
+    Your Contact Number:
+	<div class=" flex-r input">
+    <input type="message" name="message" placeholder="0123456789">
+	<i class="fas fa-lock"></i>
+	</div>
+  </label><br>
+  <label>
+  </div>
+  <!-- your other form fields go here -->
+ <font color="#F5F5F5">___________ <button class="btn" type="submit">Send</button></font>
+</form>
+
+   
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+
+
+
+</font>
+<br><br><br><br><br><br><br>
+<h1><center>Why chemisphere:</center></h1>
+<br><br><br><br>
+<br>
+<font color="white">____</font>
+<img src="a1.png" alt="Avatar" style="width:200px"><font color="white">____________________</font>
+<img src="a2.png" alt="Avatar" style="width:200px"><font color="white">____________________</font>
+<img src="a3.png" alt="Avatar" style="width:200px">
+<br>
+<br>
+<p><h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Learn at the comfort 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+Personalized notes 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp Regular tests with 
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp & safety of your home
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+doubt solving sessions
+</h3><br>
+</p>
+
+
+
+
+
+<section>
+
+  <h2></h2>
+  <p></p>
+  <!-- Left Column -->
+  <div style="width: 50%; min-width: 300px; float: left;">
+    <!-- Video 1 -->
+    <div style="background-color: whitesmoke; padding: 15px; margin: 0 2% 4% 0;">
+      <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;"></h3>
+      <div style="position: relative; width: 100%; padding-top: 56.25%;">
+        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://youtube.com/embed/9ab74Km02H8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <p style="margin: 16px 0 0 0;"><strong></strong> </p>
+    </div>
+  
+    <!-- Video 2 -->
+    <div style="background-color: whitesmoke; padding: 15px; margin: 0 2% 4% 0;">
+      <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;"></h3>
+      <div style="position: relative; width: 100%; padding-top: 56.25%;">
+        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/5PqNsvRIWKY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <p style="margin: 16px 0 0 0;"><strong></strong> </p>
+    </div>
+  </div>
+  
+  <!-- Right Column -->
+  <div style="width: 50%; min-width: 300px; float: left;">
+    <!-- Video 3 -->
+    <div style="background-color: whitesmoke; padding: 15px; margin: 0 0 4% 2%;">
+      <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;"></h3>
+      <div style="position: relative; width: 100%; padding-top: 56.25%;">
+        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/hYblxRG5WrY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <p style="margin: 16px 0 0 0;"><strong></strong> </p>
+    </div>
+  
+    <!-- Video 4 -->
+    <div style="background-color: whitesmoke; padding: 15px; margin: 0 0 4% 2%;">
+      <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;"></h3>
+      <div style="position: relative; width: 100%; padding-top: 56.25%;">
+        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/mPCmzZkwy1M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <p style="margin: 16px 0 0 0;"><strong></strong> </p>
+    </div>
+  </div>
+  <p style="clear: both; padding-top: 24px;">.</p>
+
+
+
+<section>
+  <footer>
+  
+    <div class="content">
+      <div class="left box">
+        <div class="upper">
+          <div class="topic">About us</div>
+          <p></p>
+        </div>
+        <div class="lower">
+          <div class="topic">Contact us</div>
+          <div class="phone">
+            <a href="#"><i class="fas fa-phone-volume"></i>+918850436230</a>
+          </div>
+          <div class="email">
+            <a href="#"><i class="fas fa-envelope"></i>cbilive@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="middle box">
+        <div class="topic">Our Services: Premium coaching on</div>
+        <div><a href="#">JEE MAINS</a></div>
+        <div><a href="#">JEE ADVANCED</a></div>
+        <div><a href="#">NEET UG</a></div>
+        <div><a href="#">MHT-CET</a></div>
+        <div><a href="#">10TH BOARDS</a></div>
+        <div><a href="#">12TH BOARDS</a></div>
+      </div>
+      <div class="right box">
+       
+        <form action="#">
+ 
+          <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="bottom">
+      <p>Copyright © 2022 <a href="#">Chemisphere</a> All rights reserved</p>
+    </div>
+  
+
+</section>
+</footer>
+</section>
+</body>
+</html>
